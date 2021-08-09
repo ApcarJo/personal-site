@@ -1,0 +1,17 @@
+
+// Color palette
+
+$pal-text: #FF7600;
+$pal-main: #52006A;
+$pal-sec: #CD113B;
+$pal-det: #FFA900;
+
+
+// Flex display
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
