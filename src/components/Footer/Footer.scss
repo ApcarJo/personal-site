@@ -1,0 +1,7 @@
+
+.viewFooter {
+    @extend .center;
+    background-color: yellow;
+    height: 10em;
+    justify-content: flex-end;
+}

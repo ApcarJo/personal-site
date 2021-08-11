@@ -1,0 +1,14 @@
+
+.viewHeader {
+    @extend .center;
+    background-color: green;
+    height: 4em;
+    padding: 2em;
+}
+
+.container {
+    @extend .center;
+    background-color: red;
+    height: 6em;
+    width: 100%;
+}
