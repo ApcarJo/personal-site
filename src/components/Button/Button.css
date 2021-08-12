@@ -1,0 +1,13 @@
+.button{
+    transition: 0.2s;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.button:hover{
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 0.1em 0.1em 1em white;
+    transition: 0.2s;
+}

@@ -1,14 +1,26 @@
 
 .viewHeader {
     @extend .center;
-    background-color: green;
-    height: 4em;
-    padding: 2em;
+    
 }
 
 .container {
     @extend .center;
-    background-color: red;
-    height: 6em;
-    width: 100%;
+    flex-direction: row;
+    background-color: white;
+    width: 100vw;
+    padding-top: 4em;
+}
+
+.signature {
+    @extend .center;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.navBar{
+    @extend .center;
+    flex-direction: row;
+    background-color: white;
+    color: $pal-main;
 }

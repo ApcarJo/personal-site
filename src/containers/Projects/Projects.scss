@@ -1,0 +1,23 @@
+
+.viewProjects {
+    @extend .center;
+    padding: 10em;
+}
+
+.card {
+    @extend .center;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0.1em 0.2em 2em 0.4em black;
+    height: 20em;
+    width: 20em;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+.github {
+    text-decoration: none;
+    background-color: red;
+    height: 2em;
+    width: 2em;
+}
