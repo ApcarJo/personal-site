@@ -9,29 +9,34 @@ const Projects = () => {
 
     return (
         <div className="viewProjects">
-            <div className="card" onClick={updateview}>
-                <div className="asa">
-                    <img src="C:\Users\josep\Documents\AA_Cuentas y Documentos\AA_GeeksHub\Bootcamp\FSDValencia0421\Proyectos\Portfolio_ES6\portfolio\src\img\n64_controller.png" alt="logo2" />
-                    <div className="info">
-                        <h1 className="title">Nintendo64 Controller</h1>
-                        <h4> First FullStack Developer project at GeeksHubs Academy</h4>
 
-                        <div className="row">
-                            <div className="languages">
-                                <div>CSS3</div>
-                                <div>HTML5</div>
-                            </div>
-                            <div className="measures">
-                                <div className="bar html1">80%</div>
-                                <div className="bar css1">20%</div>
-                            </div>
+            <div className="thumbnail">
+                
+            </div>
+            <div className="card">
+                <div className="info">
+                    <h1 className="title">Nintendo64 Controller</h1>
+                    <h4> First FullStack Developer project at GeeksHubs Academy</h4>
+                    <p> 25 hours in 3 days </p>
 
+                    <div className="row">
+                        <div className="languages">
+                            <div className="code">CSS3</div>
+                            <div className="code">HTML5</div>
                         </div>
-                        <a className="link" href="https://github.com/ApcarJo/nintendo64">Github</a>
+                        <div className="measures">
+                            <div className="bar html1">80%</div>
+                            <div className="bar css1">20%</div>
+                        </div>
+
+                    </div>
+                    <div className="github">
+                        <a className="link" href="https://github.com/ApcarJo/nintendo64" target="_blank">Github Link</a>
                     </div>
                 </div>
             </div>
         </div>
+
     )
 }
 
