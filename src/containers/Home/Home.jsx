@@ -1,11 +1,12 @@
 
 import React from 'react';
+import Projects from '../Projects/Projects';
 
 const Home = () => {
 
     return(
         <div className="viewHome">
-            Hello, this is Home
+            <Projects/>
         </div>
     )
 }

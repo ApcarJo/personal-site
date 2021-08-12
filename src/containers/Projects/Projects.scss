@@ -1,12 +1,30 @@
 
 .viewProjects {
     @extend .center;
-    padding: 10em;
+    padding: 5em;
+    height: 70%;
 }
 
+.thumbnail {
+    @extend .center;
+    background-color: yellowgreen;
+    height: 20em;
+    width: 20em;
+}
+
+.size {
+    border-radius: 2em;
+    height: 20em;
+    width: 20em;
+}
+
+.hideBox {
+    display: none;
+}
 .card {
     @extend .center;
-    // position: absolute;
+    position: absolute;
+    transform: translateX(25em);
     box-sizing: border-box;
     background-color: rgb(243, 243, 243);
     background: linear-gradient(100deg, rgb(240, 240, 240) 0%, rgb(216, 216, 216) 45%, rgb(190, 190, 190) 100%);
@@ -16,6 +34,7 @@
     width: 20em;
     border-radius: 2em;
     padding: 2em;
+    transition: 1s;
 }
 
 .title {
