@@ -8,7 +8,7 @@
     @extend .center;
     box-sizing: border-box;
     background-color: white;
-    box-shadow: 0.1em 0.2em 2em 0.4em black;
+    box-shadow: 0.1em 0.2em 0.4em 0.1em rgb(39, 39, 39);
     height: 20em;
     width: 20em;
     border-radius: 2em;
@@ -20,4 +20,32 @@
     background-color: red;
     height: 2em;
     width: 2em;
+}
+
+.row {
+    @extend .center;
+    flex-direction: row;
+}
+
+.bar {
+    border-radius: 1em;
+    box-shadow: 0.05em 0.05em 0.05em 0.01em rgb(39, 39, 39);
+}
+
+.html1 {
+    font-size: 0.8em;
+    width: 80%;
+    background-color: orangered;
+}
+
+.css1 {
+    font-size: 0.8em;
+    width: 20%;
+    background-color: rgb(0, 153, 255);
+}
+
+.languages {
+    @extend .center;
+    justify-content: flex-start;
+    padding-right: 2em;
 }
