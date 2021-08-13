@@ -1,0 +1,37 @@
+
+
+.viewContact {
+    @extend .center;
+    margin: 3em;
+}
+.linklogo {
+    overflow: hidden;
+    object-fit: cover;
+    height: 3em;
+    width: 3em;
+}
+
+.form {
+    @extend .center;
+
+}
+
+.text {
+    height: 2em;
+    width: 20em;
+    border: none;
+    border-radius: 0.25em;
+    border: none;
+    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.textMessage {
+    height: 4em;
+}
+
+.send {
+    border-radius: 0.3em;
+    background-color: blue;
+}
