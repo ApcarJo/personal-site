@@ -6,7 +6,7 @@ import project2 from '../../img/project2.png';
 import project3 from '../../img/selectionscreen.jpg';
 import project6 from '../../img/datepicker.jpg';
 import project7 from '../../img/searchresults.jpg';
-import project8 from '../../img/diagram.jpg';
+import project8 from '../../img/laravel.svg';
 
 const Projects = () => {
 
@@ -43,18 +43,25 @@ const Projects = () => {
         }
     }
 
+    const closeCard = () => {
+        setShow({ ...show, view: 'hideBox' })
+        }
+    
+
     return (
         <div className="viewProjects">
             <div className="grid">
                 {thumbnails.map((val, index) => (
-                    <div className="thumbnail" key={index}>
-                        <img className="size" src={val} onClick={() => updateView(index)} alt="picture" />
+                    <div className="thumbnail" key={index} onClick={() => updateView(index)}>
+                        <p className="title">{projectsdb[index].title}</p>
+                        <img className="size" src={val}  alt="picture"/>
                     </div>
                 ))}
             </div>
             <div className="grid">
                 <div className={show.view}>
                     <div className="info">
+                        <div className="close" onClick={()=>closeCard()}>Close</div>
                         <h1 className="title">{projectsdb[card.ind].title}</h1>
                         <h4> {projectsdb[card.ind].description} </h4>
                         <p> {projectsdb[card.ind].hours}</p>
