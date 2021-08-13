@@ -1,0 +1,54 @@
+
+
+.viewContact {
+    @extend .center;
+    margin: 3em;
+}
+.linklogo {
+    border-radius: 0.3em;
+    overflow: hidden;
+    object-fit: cover;
+    height: 3em;
+    width: 3em;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0.1em 0.1em 0.4em 0.05em grey;
+    }
+}
+
+.form {
+    @extend .center;
+
+}
+
+.text {
+    height: 2em;
+    width: 20em;
+    border: none;
+    border-radius: 0.25em;
+    border: none;
+    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.textMessage {
+    height: 4em;
+}
+
+.send {
+    @extend .center;
+    padding: 0.5em;
+    height: 2em;
+    width: 3em;
+    border-radius: 0.3em;
+    border: none;
+    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    background-color: white;
+    &:hover{
+        cursor: pointer;
+        color: orangered;
+        box-shadow: 0.05em 0.05em 0.1em 0.05em orangered;
+    }
+}
