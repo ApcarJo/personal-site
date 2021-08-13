@@ -1,12 +1,17 @@
 
 import React, { useState, useEffect } from 'react';
-import n64_controller from '../../img/n64_controller.png';
+import project1 from '../../img/n64_controller.png';
+import project2 from '../../img/project2.png';
 
 const Projects = () => {
 
     //HOOKS
     const [show, setShow] = useState({
         view: 'hideBox',
+    });
+
+    const [card, setCard] = useState({
+        cardNumber: '0',
     });
 
     //HANDLERS
@@ -22,43 +27,89 @@ const Projects = () => {
 
     });
 
-    const updateView = (e) => {
-        (show.view == 'hideBox') ? setShow({ ...show, view: e }) : setShow({ ...show, view: 'hideBox' })
-    }
+    const thumbnails = ["project1", "project2"]
+
+    const projects = [{
+        title: "Nintendo64 Controller",
+        description: "First project at GeeksHubs Academy",
+        hours: "25 hours in 3 days",
+        codes: ["CSS3", "HTML5"],
+        percs: ["80%", "20%"],
+        link: "https://github.com/ApcarJo/nintendo64"
+    },
+    {
+        title: "Personal website Vanilla",
+        description: "Second project at GeeksHubs Academy",
+        hours: "20 hours in 2 days",
+        codes: ["CSS3", "HTML5", "JS"],
+        percs: ["27%", "66%", "7%"],
+        link: "https://github.com/ApcarJo/PersonalWeb"
+},
+{
+    title: "Static FightGame",
+    description: "Third project at GeeksHubs Academy",
+    hours: "35 hours in 4 days",
+    codes: ["CSS3", "HTML5", "JS"],
+    percs: ["40%", "17%", "43%"],
+    link: "https://github.com/ApcarJo/FightGame"
+},
+{
+    title: "Dental Clinic",
+    description: "First FullStack Developer (frontend and backend) project at GeeksHubs Academy",
+    hours: "75 hours in 3 weeks",
+    codes: ["CSS3", "HTML5", "JS"],
+    percs: ["12%", "1%", "87%"],
+    link: "https://github.com/ApcarJo/Frontend-Dental-Clinic"
+},
+
+]
+
+console.log(projects[1]);
+
+const updateView = (e) => {
+    (show.view == 'hideBox') ? setShow({ ...show, view: e }) : setShow({ ...show, view: 'hideBox' })
+}
 
 
 
-    return (
-        <div className="viewProjects">
+return (
+    <div className="viewProjects">
+        {thumbnails.map((val, index)=>(
+        <div className="thumbnail">
+            <img className="size" src={val} onClick={() => updateView("card")} alt="picture" />
+        </div>
+        ))}
+        <div className="grid">
+        {projects.map((val, index)=>(
+        <div className={show.view}>
+            <div className="info">
+                <h1 className="title">{val.title}</h1>
+                <h4> {val.description} </h4>
+                <p> {val.hours}</p>
 
-            <div className="thumbnail" name="n64">
-                <img className="size" src={n64_controller} onClick={() => updateView("card")} alt="picture" />
-            </div>
-            <div className={show.view}>
-                <div className="info">
-                    <h1 className="title">Nintendo64  Controller</h1>
-                    <h4> First FullStack Developer project at GeeksHubs Academy</h4>
-                    <p> 25 hours in 3 days</p>
-
-                    <div className="row">
-                        <div className="languages">
-                            <div className="code">CSS3</div>
-                            <div className="code">HTML5</div>
-                        </div>
-                        <div className="measures">
-                            <div className="bar html1">80%</div>
-                            <div className="bar css1">20%</div>
-                        </div>
-
+                <div className="row">
+                    <div className="languages">
+                        {val.codes.map((cod, ind)=>(
+                        <div className="code">{cod}</div>
+                        ))}
                     </div>
-                    <div className="github">
-                        <a className="link" href="https://github.com/ApcarJo/nintendo64" target="_blank">Github</a>
+                    <div className="measures">
+                        {val.percs.map((perc, indx)=>(
+                        <div className="bar" style={{width: perc}}>{perc}</div>
+                        ))}
                     </div>
                 </div>
+                <div className="github">
+                    <a className="link" href={val.link} target="_blank">Github</a>
+                </div>
             </div>
-
         </div>
-    )
+        ))}
+    </div>
+    </div>
+
+
+)
 }
 
 export default Projects;

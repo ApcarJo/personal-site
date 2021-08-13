@@ -7,7 +7,6 @@
 
 .thumbnail {
     @extend .center;
-    background-color: yellowgreen;
     height: 20em;
     width: 20em;
 }
@@ -21,10 +20,19 @@
 .hideBox {
     display: none;
 }
+
+.grid {
+    display: grid;
+    height: auto;
+    width: auto;
+    gap: 1em;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(2, 0.2fr);
+}
 .card {
     @extend .center;
-    position: absolute;
-    transform: translateX(25em);
+    // position: absolute;
+    // transform: translateX(25em);
     box-sizing: border-box;
     background-color: rgb(243, 243, 243);
     background: linear-gradient(100deg, rgb(240, 240, 240) 0%, rgb(216, 216, 216) 45%, rgb(190, 190, 190) 100%);
@@ -49,6 +57,7 @@
 .bar {
     border-radius: 1em;
     box-shadow: 0.05em 0.05em 0.05em 0.01em rgb(39, 39, 39);
+    background-color: orangered;
 }
 
 .html1 {
