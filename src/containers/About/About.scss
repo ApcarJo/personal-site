@@ -1,0 +1,13 @@
+
+.viewAbout{
+    @extend .center;
+    
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 20em;
+    width: 30em;
+}

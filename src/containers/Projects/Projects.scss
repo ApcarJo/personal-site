@@ -1,23 +1,108 @@
 
 .viewProjects {
     @extend .center;
-    padding: 10em;
+    padding: 5em;
+    height: 70%;
 }
 
+.thumbnail {
+    @extend .center;
+    height: 20em;
+    width: 20em;
+}
+
+.size {
+    border-radius: 2em;
+    height: 20em;
+    width: 20em;
+}
+
+.hideBox {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    height: auto;
+    width: auto;
+    gap: 1em;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(2, 0.2fr);
+}
 .card {
     @extend .center;
+    // position: absolute;
+    // transform: translateX(25em);
     box-sizing: border-box;
-    background-color: white;
-    box-shadow: 0.1em 0.2em 2em 0.4em black;
-    height: 20em;
+    background-color: rgb(243, 243, 243);
+    background: linear-gradient(100deg, rgb(240, 240, 240) 0%, rgb(216, 216, 216) 45%, rgb(190, 190, 190) 100%);
+    border: 0.2em white solid;
+    box-shadow: 0.1em 0.2em 0.4em 0.1em rgb(39, 39, 39);
+    height: 25em;
     width: 20em;
     border-radius: 2em;
     padding: 2em;
+    transition: 1s;
+}
+
+.title {
+    text-shadow: 0.05em 0.05em 0.05em white;
+}
+
+.row {
+    @extend .center;
+    flex-direction: row;
+}
+
+.bar {
+    border-radius: 1em;
+    box-shadow: 0.05em 0.05em 0.05em 0.01em rgb(39, 39, 39);
+    background-color: orangered;
+}
+
+.html1 {
+    font-size: 0.8em;
+    width: 80%;
+    background-color: orangered;
+}
+
+.css1 {
+    font-size: 0.8em;
+    width: 20%;
+    background-color: rgb(0, 153, 255);
+}
+
+.code {
+    padding-left: 0.3em;
+}
+
+.languages {
+    @extend .center;
+    align-items: flex-start;
+    padding-right: 0.5em;
+    padding-bottom: 2em;
+}
+.measures {
+    width: 100%;
+    padding-bottom: 2em;
 }
 
 .github {
-    text-decoration: none;
-    background-color: red;
-    height: 2em;
-    width: 2em;
+    box-sizing: border-box;
+    @extend .center;
+    height: 1.5em;
+    width: 100%;
+    border-radius: 2em;
+    background-color: rgb(179, 179, 179);
+    border: 0.02em solid rgb(255, 255, 255);
+    
+    &:hover {
+        box-shadow: 0em 0em 0.1em 0.1em white;
+    }
+
+}
+
+.link {
+    text-decoration: unset;
+    color: black;
 }
