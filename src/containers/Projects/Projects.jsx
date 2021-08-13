@@ -1,9 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import {projectsdb} from './Projectsdb.js';
+import { projectsdb } from './Projectsdb.js';
 import project1 from '../../img/n64_controller.png';
 import project2 from '../../img/project2.png';
+import project3 from '../../img/selectionscreen.jpg';
 import project6 from '../../img/datepicker.jpg';
+import project7 from '../../img/searchresults.jpg';
+import project8 from '../../img/diagram.jpg';
 
 const Projects = () => {
 
@@ -13,7 +16,7 @@ const Projects = () => {
     });
 
     const [card, setCard] = useState({
-        cardNumber: '0',
+        ind: '0',
     });
 
     //HANDLERS
@@ -25,17 +28,19 @@ const Projects = () => {
 
     }, []);
 
-    useEffect(() => {
 
-    });
-
-    const thumbnails = [project1, project2, project6]
+    const thumbnails = [project1, project2, project3, project6, project7, project8]
 
 
     // DATABASE OF THE PROJECTS, ARRAY OF OBJECTS
 
     const updateView = (e) => {
-        (show.view == 'hideBox') ? setShow({ ...show, view: 'card' }) : setShow({ ...show, view: 'hideBox' })
+        if (e == card.ind) {
+            (show.view == 'hideBox') ? setShow({ ...show, view: 'card' }) : setShow({ ...show, view: 'hideBox' })
+        } else {
+            setShow({ ...show, view: 'card' })
+            setCard({ ...card, ind: e });
+        }
     }
 
     return (
@@ -43,36 +48,34 @@ const Projects = () => {
             <div className="grid">
                 {thumbnails.map((val, index) => (
                     <div className="thumbnail" key={index}>
-                        <img className="size" src={val} onClick={() => updateView("card")} alt="picture" />
+                        <img className="size" src={val} onClick={() => updateView(index)} alt="picture" />
                     </div>
                 ))}
             </div>
             <div className="grid">
-                {projectsdb.map((val, index) => (
-                    <div className={show.view}>
-                        <div className="info">
-                            <h1 className="title">{val.title}</h1>
-                            <h4> {val.description} </h4>
-                            <p> {val.hours}</p>
+                <div className={show.view}>
+                    <div className="info">
+                        <h1 className="title">{projectsdb[card.ind].title}</h1>
+                        <h4> {projectsdb[card.ind].description} </h4>
+                        <p> {projectsdb[card.ind].hours}</p>
 
-                            <div className="row">
-                                <div className="languages">
-                                    {val.codes.map((cod, ind) => (
-                                        <div className="code">{cod}</div>
-                                    ))}
-                                </div>
-                                <div className="measures">
-                                    {val.percs.map((perc, indx) => (
-                                        <div className="bar" style={{ width: perc }}>{perc}</div>
-                                    ))}
-                                </div>
+                        <div className="row">
+                            <div className="languages">
+                                {projectsdb[card.ind].codes.map((cod, ind) => (
+                                    <div className="code">{cod}</div>
+                                ))}
                             </div>
-                            <div className="github">
-                                <a className="link" href={val.link} target="_blank">Github</a>
+                            <div className="measures">
+                                {projectsdb[card.ind].percs.map((perc, indx) => (
+                                    <div className="bar" style={{ width: perc }}>{perc}</div>
+                                ))}
                             </div>
                         </div>
+                        <div className="github">
+                            <a className="link" href={projectsdb[card.ind].link} target="_blank">Github</a>
+                        </div>
                     </div>
-                ))}
+                </div>
             </div>
         </div>
 

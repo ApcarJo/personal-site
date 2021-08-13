@@ -7,15 +7,15 @@
 
 .thumbnail {
     @extend .center;
-    height: 20em;
-    width: auto;
-    padding: 1em;
+    height: 15em;
+    padding: 0.2em;
 }
 
 .size {
+    object-fit: cover;
     border-radius: 0.25em;
-    height: 20em;
-    width: 20em;
+    height: 15em;
+    width: 15em;
 }
 
 .hideBox {
@@ -32,8 +32,9 @@
 }
 .card {
     @extend .center;
-    // position: absolute;
-    // transform: translateX(25em);
+    position: absolute;
+    transform: translate(-9em, -40em);
+
     box-sizing: border-box;
     background-color: rgb(243, 243, 243);
     background: linear-gradient(100deg, rgb(240, 240, 240) 0%, rgb(216, 216, 216) 45%, rgb(190, 190, 190) 100%);
