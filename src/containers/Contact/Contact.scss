@@ -5,10 +5,16 @@
     margin: 3em;
 }
 .linklogo {
+    border-radius: 0.3em;
     overflow: hidden;
     object-fit: cover;
     height: 3em;
     width: 3em;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0.1em 0.1em 0.4em 0.05em grey;
+    }
 }
 
 .form {
@@ -32,6 +38,17 @@
 }
 
 .send {
+    @extend .center;
+    padding: 0.5em;
+    height: 2em;
+    width: 3em;
     border-radius: 0.3em;
-    background-color: blue;
+    border: none;
+    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    background-color: white;
+    &:hover{
+        cursor: pointer;
+        color: orangered;
+        box-shadow: 0.05em 0.05em 0.1em 0.05em orangered;
+    }
 }
