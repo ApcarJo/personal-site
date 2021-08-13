@@ -61,10 +61,24 @@ const Projects = () => {
     percs: ["12%", "1%", "87%"],
     link: "https://github.com/ApcarJo/Frontend-Dental-Clinic"
 },
+{
+    title: "React MovieSuit",
+    description: "Second FullStack Developer (frontend and backend) project at GeeksHubs Academy",
+    hours: "75 hours in 3 weeks",
+    codes: ["SCSS", "HTML5", "JS"],
+    percs: ["9%", "2%", "89%"],
+    link: "https://github.com/ApcarJo/FrontEnd_ReactMovieSuite"
+},
+{
+    title: "Chat Game",
+    description: "First Backend project with PHP Laravel, Composer, Docker at GeeksHubs Academy",
+    hours: "35 hours in 4 days",
+    codes: ["PHP", "BLADE", "SHELL"],
+    percs: ["87%", "12%", "1%"],
+    link: "https://github.com/ApcarJo/laravelpassport"
+},
 
 ]
-
-console.log(projects[1]);
 
 const updateView = (e) => {
     (show.view == 'hideBox') ? setShow({ ...show, view: e }) : setShow({ ...show, view: 'hideBox' })
