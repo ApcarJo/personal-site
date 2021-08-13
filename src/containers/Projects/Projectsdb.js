@@ -1,15 +1,51 @@
-
-class project {
-
-    constructor (title, description, hours, code, percs, link){
-
-        this.title = title;
-        this.description = description;
-        this.hours = hours;
-        this.code = code;
-        this.percs = percs;
-        this.link = link;
-    }
+export const projectsdb = [{
+    title: "Nintendo64 Controller",
+    description: "First project at GeeksHubs Academy",
+    hours: "25 hours in 3 days",
+    codes: ["CSS3", "HTML5"],
+    percs: ["80%", "20%"],
+    link: "https://github.com/ApcarJo/nintendo64"
+},
+{
+    title: "Personal website Vanilla",
+    description: "Second project at GeeksHubs Academy",
+    hours: "20 hours in 2 days",
+    codes: ["CSS3", "HTML5", "JS"],
+    percs: ["27%", "66%", "7%"],
+    link: "https://github.com/ApcarJo/PersonalWeb"
+},
+{
+    title: "Static FightGame",
+    description: "Third project at GeeksHubs Academy",
+    hours: "35 hours in 4 days",
+    codes: ["CSS3", "HTML5", "JS"],
+    percs: ["40%", "17%", "43%"],
+    link: "https://github.com/ApcarJo/FightGame"
+},
+{
+    title: "Dental Clinic",
+    description: "First FullStack Developer (frontend and backend) project at GeeksHubs Academy",
+    hours: "75 hours in 3 weeks",
+    codes: ["CSS3", "HTML5", "JS"],
+    percs: ["12%", "1%", "87%"],
+    link: "https://github.com/ApcarJo/Frontend-Dental-Clinic"
+},
+{
+    title: "React MovieSuit",
+    description: "Second FullStack Developer (frontend and backend) project at GeeksHubs Academy",
+    hours: "75 hours in 3 weeks",
+    codes: ["SCSS", "HTML5", "JS"],
+    percs: ["9%", "2%", "89%"],
+    link: "https://github.com/ApcarJo/FrontEnd_ReactMovieSuite"
+},
+{
+    title: "Chat Game",
+    description: "First Backend project with PHP Laravel, Composer, Docker at GeeksHubs Academy",
+    hours: "35 hours in 4 days",
+    codes: ["PHP", "BLADE", "SHELL"],
+    percs: ["87%", "12%", "1%"],
+    link: "https://github.com/ApcarJo/laravelpassport"
 }
+]
 
-let project1 = new project("Nintendo 64 Controller");
+export default projectsdb;

@@ -8,11 +8,12 @@
 .thumbnail {
     @extend .center;
     height: 20em;
-    width: 20em;
+    width: auto;
+    padding: 1em;
 }
 
 .size {
-    border-radius: 2em;
+    border-radius: 0.25em;
     height: 20em;
     width: 20em;
 }
@@ -40,7 +41,7 @@
     box-shadow: 0.1em 0.2em 0.4em 0.1em rgb(39, 39, 39);
     height: 25em;
     width: 20em;
-    border-radius: 2em;
+    border-radius: 0.5em;
     padding: 2em;
     transition: 1s;
 }

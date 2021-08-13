@@ -1,0 +1,14 @@
+.button{
+    transition: 0.2s;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    &:hover{
+        cursor: pointer;
+        text-decoration: none;
+        color: orangered;
+        transition: 0.2s;
+
+    }
+}

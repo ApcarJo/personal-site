@@ -13,7 +13,7 @@ const Header = () => {
                     <Button path="/" destination="Home" />
                     <Button path="/about" destination="About Me" />
                     <Button path="/projects" destination="Projects" />
-                    <Button path="/contact" destination="Contacts" />
+                    <Button path="/contact" destination="Contact" />
                 </nav>
 
             </div>
