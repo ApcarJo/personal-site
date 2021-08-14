@@ -12,6 +12,13 @@
     box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
 }
 
+.info {
+    @extend .center;
+}
+
+.info2 {
+    height: 20em;
+}
 .size {
     overflow: hidden;
     object-fit: contain;
@@ -26,8 +33,6 @@
 .grid {
     padding: 1em;
     display: grid;
-    height: auto;
-    width: auto;
     gap: 1em;
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: repeat(2, 0.2fr);
@@ -51,8 +56,8 @@
 }
 
 .close {
-    height: auto;
-    width: auto;
+    height: 1.5em;
+    width: 18em;
     border-radius: 0.3em;
     background-color: rgb(179, 179, 179);
     border: 0.02em solid rgb(255, 255, 255);
@@ -120,21 +125,24 @@
 
 @media (max-width: 75em){
     .card {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         position: inherit;
     }
 }
 
 @media (max-width: 45em){
     .grid {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         grid-template-columns: repeat(2, 0.5fr);
-    grid-template-rows: repeat(3, 0.2fr);
+        grid-template-rows: repeat(3, 0.2fr);
     } 
 }
 
 @media (max-width: 35em){
     .grid {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         grid-template-columns: repeat(1, 0.5fr);
-    grid-template-rows: repeat(6, 0.2fr);
+        grid-template-rows: repeat(6, 0.2fr);
     }
 }
 

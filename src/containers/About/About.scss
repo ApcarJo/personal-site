@@ -22,16 +22,19 @@
 
 @media (max-width: 55em){
     .row {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         flex-direction: column;
     }
 }
 
 @media (max-width: 35em){
     .row {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         flex-direction: column;
     }
 
     .text1 {
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         width: fit-content;
         height: fit-content;
         }
