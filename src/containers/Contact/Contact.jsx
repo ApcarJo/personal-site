@@ -13,10 +13,18 @@ const Contact = () => {
         message:''
     });
 
+    const [guest, setGuest] = useState({
+        guestMessage: [],
+    });
+
     //Handler
     const updateMsg = (e) => {
         setMsg({...msg, [e.target.name]: e.target.value})
     }
+
+    useEffect(()=>{
+        guestBook();
+    },[]);
 
     const send = async () => {
         let body = {
@@ -25,13 +33,36 @@ const Contact = () => {
             message: msg.message
         }
 
-        let res = await axios.post('http://localhost:3006/message', body)
+        let res = await axios.post('http://localhost:3006/message', body);
 
         setTimeout(()=>{
             history.push(`/`);
         },750);
     }
 
+    const guestBook = async () => {
+
+        let array=[];
+        let res = await axios.get('http://localhost:3006/message');
+  
+        
+        console.log(res.data)
+        
+        for (let i=0; i<res.data.length; i++){
+            array.push(
+                <div className="signature">
+                    <p>{res.data[i].name}</p>
+                    <p>{res.data[i].message}</p>
+                </div>);
+            console.log(res.data[i].message)
+        }
+        setGuest({...guest, guestMessage: array});
+ 
+    }
+
+    if (guest.guestMessage[0]==undefined){
+        return (<h1>Loading</h1>)
+    } else {
     return (
         <div className="viewContact">
             <div className="content">
@@ -47,9 +78,16 @@ const Contact = () => {
 
                     <button class="send" name="enviar" id="enviarContact" onClick={()=>send()}>Send</button>
                 </div>
+
+                <div className="guestBook">
+                {guest.guestMessage.map((val, index)=>(
+                    <div>{val}</div>
+                ))}
+                </div>
             </div>
         </div>
     )
+                }
 }
 
 export default Contact;
