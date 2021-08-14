@@ -1,22 +1,38 @@
 
 .viewAbout{
     @extend .center;
-    
+    width: 100%;
 }
 
-.text {
+.text1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 20em;
     width: 30em;
+    clip-path: 10% 20% 10% 50%;
 }
 
-.content {
-    padding: 5em;
-}
+
 
 .pic {
     height: 20em;
     padding: 2em;
+}
+
+@media (max-width: 55em){
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 35em){
+    .row {
+        flex-direction: column;
+    }
+
+    .text1 {
+        width: fit-content;
+        height: fit-content;
+        }
 }

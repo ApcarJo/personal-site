@@ -5,22 +5,18 @@
 }
 
 .container {
+    box-sizing: border-box;
     @extend .center;
+    width: 100%;
+
     flex-direction: row;
-    background-color: white;
-    width: 100vw;
-    padding-top: 4em;
+    background-color: $pal-footer;
+    padding: 1.5em;
 }
+
 
 .signature {
     @extend .center;
     padding-left: 2em;
-    padding-right: 2em;
-}
-
-.navBar{
-    @extend .center;
-    flex-direction: row;
-    background-color: white;
-    color: $pal-main;
+    padding-right: 3em;
 }

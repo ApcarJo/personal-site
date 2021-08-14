@@ -45,41 +45,43 @@ const Projects = () => {
 
     const closeCard = () => {
         setShow({ ...show, view: 'hideBox' })
-        }
-    
+    }
+
 
     return (
         <div className="viewProjects">
-            <div className="grid">
-                {thumbnails.map((val, index) => (
-                    <div className="thumbnail" key={index} onClick={() => updateView(index)}>
-                        <p className="title">{projectsdb[index].title}</p>
-                        <img className="size" src={val}  alt="picture"/>
-                    </div>
-                ))}
-            </div>
-            <div className="grid">
-                <div className={show.view}>
-                    <div className="info">
-                        <div className="close" onClick={()=>closeCard()}>Close</div>
-                        <h1 className="title">{projectsdb[card.ind].title}</h1>
-                        <h4> {projectsdb[card.ind].description} </h4>
-                        <p> {projectsdb[card.ind].hours}</p>
-
-                        <div className="row">
-                            <div className="languages">
-                                {projectsdb[card.ind].codes.map((cod, ind) => (
-                                    <div className="code">{cod}</div>
-                                ))}
-                            </div>
-                            <div className="measures">
-                                {projectsdb[card.ind].percs.map((perc, indx) => (
-                                    <div className="bar" style={{ width: perc }}>{perc}</div>
-                                ))}
-                            </div>
+            <div className="content">
+                <div className="grid">
+                    {thumbnails.map((val, index) => (
+                        <div className="thumbnail" key={index} onClick={() => updateView(index)}>
+                            <p className="title">{projectsdb[index].title}</p>
+                            <img className="size" src={val} alt="picture" />
                         </div>
-                        <div className="github">
-                            <a className="link" href={projectsdb[card.ind].link} target="_blank">Github</a>
+                    ))}
+                </div>
+                <div>
+                    <div className={show.view}>
+                        <div className="info">
+                            <div className="close" onClick={() => closeCard()}>Close</div>
+                            <h1 className="title">{projectsdb[card.ind].title}</h1>
+                            <h4> {projectsdb[card.ind].description} </h4>
+                            <p> {projectsdb[card.ind].hours}</p>
+
+                            <div className="data">
+                                <div className="languages">
+                                    {projectsdb[card.ind].codes.map((cod, ind) => (
+                                        <div className="code">{cod}</div>
+                                    ))}
+                                </div>
+                                <div className="measures">
+                                    {projectsdb[card.ind].percs.map((perc, indx) => (
+                                        <div className="bar" style={{ width: perc }}>{perc}</div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="github">
+                                <a className="link" href={projectsdb[card.ind].link} target="_blank">Github</a>
+                            </div>
                         </div>
                     </div>
                 </div>

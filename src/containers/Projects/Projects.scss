@@ -1,13 +1,12 @@
 
 .viewProjects {
     @extend .center;
-    padding: 5em;
-    height: 70%;
 }
 
 .thumbnail {
     @extend .center;
     height: 15em;
+    width: 20em;
     padding: 0.2em;
     border-radius: 0.25em;
     box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
@@ -15,7 +14,7 @@
 
 .size {
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
     height: 15em;
     width: 15em;
 }
@@ -25,6 +24,7 @@
 }
 
 .grid {
+    padding: 1em;
     display: grid;
     height: auto;
     width: auto;
@@ -35,8 +35,8 @@
 
 .card {
     @extend .center;
-    position: absolute;
-    transform: translate(-9em, -40em);
+    box-sizing: border-box;
+    position: initial;
 
     box-sizing: border-box;
     background-color: rgb(243, 243, 243);
@@ -46,7 +46,7 @@
     height: 25em;
     width: 20em;
     border-radius: 0.5em;
-    padding: 2em;
+    padding: 1em;
     transition: 1s;
 }
 
@@ -65,7 +65,7 @@
     text-shadow: 0.05em 0.05em 0.05em white;
 }
 
-.row {
+.data{
     @extend .center;
     flex-direction: row;
     // border: solid black 0.1em;
@@ -77,7 +77,7 @@
 }
 
 .bar {
-    border-radius: 1em;
+    border-radius: 0.3em;
     box-shadow: 0.05em 0.05em 0.05em 0.01em rgb(39, 39, 39);
     background-color: orangered;
 }
@@ -117,3 +117,24 @@
         color: orangered;
     }
 }
+
+@media (max-width: 75em){
+    .card {
+        position: inherit;
+    }
+}
+
+@media (max-width: 45em){
+    .grid {
+        grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(3, 0.2fr);
+    } 
+}
+
+@media (max-width: 35em){
+    .grid {
+        grid-template-columns: repeat(1, 0.5fr);
+    grid-template-rows: repeat(6, 0.2fr);
+    }
+}
+

@@ -1,19 +1,12 @@
 
 // Color palette
 
-// $pal-main: #E03C0E;
-// $pal-sec: #FFFFFF;
-// $pal-text: #000000;
-// $pal-det: #F4F4F4;
-// $pal-footer: #1E9EAC;
-// $pal-text-footer: #5A5A5A5A;
-
 $pal-main: #252b3a;
 $pal-sec: #FFFFFF;
 $pal-text: #000000;
 $pal-det: orangered;
-$pal-footer: #1E9EAC;
-$pal-text-footer: #09101f5a;
+$pal-footer: #09101f;
+$pal-text-footer: #1E9EAC;
 
 // Flex display
 
@@ -24,6 +17,13 @@ $pal-text-footer: #09101f5a;
     flex-direction: column;
 }
 
-@media (max-width: 50em){
-    
+.content {
+    box-sizing: border-box;
+    @extend .center;
+    width: 100%;
+    padding: 2%;
+}
+
+.row {
+    flex-direction: row;
 }

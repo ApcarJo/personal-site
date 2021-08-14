@@ -1,5 +1,6 @@
 
 .viewHome {
-    height: 40em;
+    @extend .center;
+    padding: 2em;
 }
 

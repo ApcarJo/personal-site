@@ -1,7 +1,65 @@
 
 .viewFooter {
     @extend .center;
-    background-color: white;
-    height: 10em;
-    justify-content: flex-end;
+}
+
+.infooter {
+    @extend .center;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: $pal-footer;
+    color: $pal-text-footer;
+    padding: 1%;
+}
+
+.logogmail {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    overflow: hidden;
+    height: 1.8em;
+    width: auto;
+}
+.logogit {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    overflow: hidden;
+    height: 2.5em;
+    width: auto;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+    &:hover{
+        transform: scale(1.1);
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+}
+
+.footerlink {
+    text-decoration: none;
+    color: $pal-text-footer;
+    &:hover{
+        cursor: pointer;
+        color: $pal-sec;
+    }
+}
+
+.linklogo {
+    border-radius: 0.3em;
+    overflow: hidden;
+    object-fit: cover;
+    height: 2em;
+    width: auto;
+
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+    &:hover{
+        transform: scale(1.1);
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+}
+
+@media (max-width: 40em){
+    .infooter {
+        flex-direction: column;
+    }
 }

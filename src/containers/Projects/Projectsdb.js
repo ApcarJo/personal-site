@@ -39,7 +39,7 @@ export const projectsdb = [{
     link: "https://github.com/ApcarJo/FrontEnd_ReactMovieSuite"
 },
 {
-    title: "Chat Game",
+    title: "Video Games Chatrooms",
     description: "First Backend project with PHP Laravel, Composer, Docker at GeeksHubs Academy",
     hours: "35 hours in 4 days",
     codes: ["PHP", "BLADE", "SHELL"],

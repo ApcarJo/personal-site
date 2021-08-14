@@ -2,53 +2,64 @@
 
 .viewContact {
     @extend .center;
-    margin: 3em;
-}
-.linklogo {
-    border-radius: 0.3em;
-    overflow: hidden;
-    object-fit: cover;
-    height: 3em;
-    width: 3em;
-
-    &:hover{
-        cursor: pointer;
-        box-shadow: 0.1em 0.1em 0.4em 0.05em grey;
-    }
 }
 
 .form {
     @extend .center;
-
+    padding: 2%;
 }
 
+.intext {
+    box-sizing: border-box;
+    margin: 2%;
+    width: 18em;
+}
 .text {
-    height: 2em;
-    width: 20em;
+    box-sizing: border-box;
+    height: 3.5em;
+    width: 30em;
     border: none;
     border-radius: 0.25em;
-    border: none;
-    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    border: 0.1em solid darkcyan;
+    
     margin-bottom: 1em;
     padding: 0.5em;
+    transition: 0.2s;
+    &:hover{
+    
+        transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
 }
 
 .textMessage {
-    height: 4em;
+    height: 10em;
 }
 
 .send {
     @extend .center;
     padding: 0.5em;
     height: 2em;
-    width: 3em;
+    width: 30em;
     border-radius: 0.3em;
-    border: none;
-    box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
-    background-color: white;
+    border: 0.1em solid darkcyan;
+    background-color: $pal-sec;
     &:hover{
         cursor: pointer;
-        color: orangered;
-        box-shadow: 0.05em 0.05em 0.1em 0.05em orangered;
+        color: darkcyan;
+        box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
+    }
+}
+
+@media (max-width: 40em){
+    .text {
+        width: 25em;
+    }
+
+    .textMessage {
+        width: 25em;
+    }
+
+    .send {
+        width: 25em;
     }
 }
