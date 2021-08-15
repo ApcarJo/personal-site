@@ -4,9 +4,11 @@
 }
 
 .thumbnail {
+    cursor: pointer;
+    overflow: hidden;
     @extend .center;
-    height: 15em;
-    width: 20em;
+    height: 20em;
+    width: 25em;
     padding: 0.2em;
     border-radius: 0.25em;
     box-shadow: 0.05em 0.05em 0.1em 0.05em darkcyan;
@@ -22,8 +24,8 @@
 .size {
     overflow: hidden;
     object-fit: contain;
-    height: 15em;
-    width: 15em;
+    height: 25em;
+    width: 25em;
 }
 
 .hideBox {
@@ -31,11 +33,12 @@
 }
 
 .grid {
+    overflow: hidden;
     padding: 1em;
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: repeat(2, 0.2fr);
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(3, 0.2fr);
 }
 
 .card {
@@ -130,15 +133,8 @@
     }
 }
 
-@media (max-width: 45em){
-    .grid {
-        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-        grid-template-columns: repeat(2, 0.5fr);
-        grid-template-rows: repeat(3, 0.2fr);
-    } 
-}
 
-@media (max-width: 35em){
+@media (max-width: 50em){
     .grid {
         transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
         grid-template-columns: repeat(1, 0.5fr);

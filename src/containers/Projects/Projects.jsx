@@ -35,8 +35,8 @@ const Projects = () => {
     // DATABASE OF THE PROJECTS, ARRAY OF OBJECTS
 
     const updateView = (e) => {
-        if (e == card.ind) {
-            (show.view == 'hideBox') ? setShow({ ...show, view: 'card' }) : setShow({ ...show, view: 'hideBox' })
+        if (e === card.ind) {
+            (show.view === 'hideBox') ? setShow({ ...show, view: 'card' }) : setShow({ ...show, view: 'hideBox' })
         } else {
             setShow({ ...show, view: 'card' })
             setCard({ ...card, ind: e });

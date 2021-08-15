@@ -26,6 +26,10 @@ const Contact = () => {
         guestBook();
     },[]);
 
+    useEffect(()=>{
+
+    });
+
     const send = async () => {
         let body = {
             name: msg.name,
@@ -33,7 +37,7 @@ const Contact = () => {
             message: msg.message
         }
 
-        let res = await axios.post('http://localhost:3006/message', body);
+        let res = await axios.post('https://guestbookpw.herokuapp.com/message', body);
 
         setTimeout(()=>{
             history.push(`/`);
@@ -43,7 +47,7 @@ const Contact = () => {
     const guestBook = async () => {
 
         let array=[];
-        let res = await axios.get('http://localhost:3006/message');
+        let res = await axios.get('https://guestbookpw.herokuapp.com/message');
   
         
         console.log(res.data)
@@ -54,19 +58,15 @@ const Contact = () => {
                     <p>{res.data[i].name}</p>
                     <p>{res.data[i].message}</p>
                 </div>);
-            console.log(res.data[i].message)
         }
         setGuest({...guest, guestMessage: array});
  
     }
 
-    if (guest.guestMessage[0]==undefined){
-        return (<h1>Loading</h1>)
-    } else {
     return (
         <div className="viewContact">
             <div className="content">
-                <div className="intext"><h3>Hi again my friend, let's talk. </h3></div>
+                <div className="intext"><h3>Hi again my friend! </h3></div>
                 {/* <pre>{JSON.stringify(msg, null,2)}</pre> */}
                 <div className="form">
 
@@ -79,15 +79,17 @@ const Contact = () => {
                     <button class="send" name="enviar" id="enviarContact" onClick={()=>send()}>Send</button>
                 </div>
 
-                <div className="guestBook">
+                {/* <div className="guestBook">
                 {guest.guestMessage.map((val, index)=>(
-                    <div>{val}</div>
+                    <div className="guestCards">
+                    <div>{val.name}</div>
+                    <div>{val.message}</div>
+                    </div>
                 ))}
-                </div>
+                </div> */}
             </div>
         </div>
     )
-                }
 }
 
 export default Contact;
