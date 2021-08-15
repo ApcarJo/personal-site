@@ -7,7 +7,7 @@ export const projectsdb = [{
     link: "https://github.com/ApcarJo/nintendo64"
 },
 {
-    title: "Personal website Vanilla",
+    title: "Personal Website",
     description: "Second project at GeeksHubs Academy",
     hours: "20 hours in 2 days",
     codes: ["CSS3", "HTML5", "JS"],
