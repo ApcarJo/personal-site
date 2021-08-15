@@ -1,4 +1,8 @@
 
+The WebSite is deployed at Heroku.
+https://jlawebsite.herokuapp.com/
+
+
 Personal website
 - About Me
 - Projects Portfolio
