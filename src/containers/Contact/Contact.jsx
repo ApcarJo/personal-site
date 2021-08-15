@@ -48,9 +48,7 @@ const Contact = () => {
 
         let array=[];
         let res = await axios.get('https://guestbookpw.herokuapp.com/message');
-  
-        
-        console.log(res.data)
+
         
         for (let i=0; i<res.data.length; i++){
             array.push(
