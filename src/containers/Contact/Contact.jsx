@@ -64,7 +64,7 @@ const Contact = () => {
     return (
         <div className="viewContact">
             <div className="content">
-                <div className="intext"><h3>Hi again my friend! </h3></div>
+                <h3>Hi again my friend! </h3>
                 {/* <pre>{JSON.stringify(msg, null,2)}</pre> */}
                 <div className="form">
 
