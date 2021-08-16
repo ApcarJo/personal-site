@@ -13,3 +13,12 @@ JavaScript, React, Axios, Heroku, Node.Sass
 Backend: https://github.com/ApcarJo/guestbookps
 
 JavaScript, NodeJS, ExpressJS, Mongoose, MongoAtlas, Heroku
+
+Work In Progress:
+
+- Work in progress section
+- Project cards as a component
+- Articles section
+- Link to my IG profile
+- Redisgn of the web style
+- My own logo and favicon
